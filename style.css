@@ -261,3 +261,65 @@ body {
   text-decoration: underline;
 }
 
+/* ================= 分类区链接样式 ================= */
+.sublinks a {
+  color: black;              /* 默认黑色 */
+  text-decoration: none;     /* 去掉下划线 */
+  font-weight: 500;
+}
+
+.sublinks a:visited {
+  color: black;              /* 点击后仍然是黑色 */
+}
+
+.sublinks a:hover {
+  color: #555;               /* 悬停时深灰 */
+  text-decoration: underline;
+}
+
+
+/* ================= 手机端优化 ================= */
+@media (max-width: 768px) {
+
+  /* 取消 panel 的大边距，文字正常换行 */
+  .panel {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    text-align: left;  /* 手机端更自然 */
+  }
+
+  /* Hero 区域文字缩小 */
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+  }
+
+  /* 按钮更适合触屏 */
+  .btn {
+    font-size: 14px;
+    padding: 12px 18px;
+    display: inline-block;
+    margin: 10px auto;
+  }
+
+  /* 导航栏竖排显示 */
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+
+  /* 竖向文字在手机端隐藏（不挡内容） */
+  .vertical-text {
+    display: none;
+  }
+}
+
