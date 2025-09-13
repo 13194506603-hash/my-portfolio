@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graphic Works - My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 页面整体样式 */
+    body {
+      margin: 0;
+      font-family: 'Sen', sans-serif;
+      background-color: #fff;
+      color: #222;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    /* 作品展示区 */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    }
+
+    /* 响应式标题 */
+    @media (max-width: 768px) {
+      header {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>Graphic Works</header>
+
+  <main>
+    <div class="gallery">
+<div class="gallery">
+  <img src="images/works/Frame1.jpg" alt="Work 1">
+  <img src="images/works/Frame13.png" alt="Work 2">
+  <img src="images/works/Frame25.jpg" alt="Work 3">
+  <img src="images/works/frame8.png" alt="Work 4">
+</div>
+
+
+      <!-- 你可以继续添加图片 -->
+    </div>
+  </main>
+</body>
+</html>
