@@ -1,0 +1,263 @@
+/* ================= 全局样式 ================= */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url("images/bg-hero.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #222;
+  overflow-x: hidden;
+}
+
+
+/* ================= 顶部导航 ================= */
+.topbar { 
+  background: black;
+  color: white;
+  display: flex; 
+  justify-content: space-between;   /* 左中右布局 */
+  align-items: center;
+  padding: 30px 0px;                /* 桌面端厚度 */
+  position: fixed;                  /* 固定在页面顶端 */
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  z-index: 20; 
+}
+
+/* ================= 中间区域占位 ================= */
+.center {
+  flex: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= 导航文字容器 ================= */
+.nav {
+  text-align: center;
+}
+
+/* 小标题（如果有的话） */
+.nav-title {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* ================= 导航链接 ================= */
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 30px;                        /* 链接间距（桌面端） */
+  justify-content: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;                  /* 桌面端字体 */
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* ================= 响应式调整 ================= */
+@media (max-width: 768px) {
+  .topbar {
+    padding: 15px 0px;              /* 手机端更薄 */
+  }
+
+  .nav-links {
+    gap: 15px;                      /* 缩小间距 */
+  }
+
+  .nav-links a {
+    font-size: 14px;                /* 手机端字体更小 */
+  }
+}
+
+/* ================= 彩点装饰条 ================= */
+#dotsCanvas {
+  display: block;
+  width: 100%;
+  height: 40px;
+  background: transparent;
+}
+
+
+/* ================= Hero 区域 ================= */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* 占满视口高度 */
+  text-align: center;
+  color: black;
+  position: relative;
+  z-index: 5;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.hero-sub {
+  font-size: 20px;
+  margin: 10px 0 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: #444;
+}
+
+
+/* ================= 分类区 ================= */
+.categories {
+  list-style: none;
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.cat-title {
+  font-size: 20px;
+  font-family: 'Playfair Display', serif;
+  background: none;
+  border: none;
+  font-weight: bold;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.sublinks {
+  list-style: none;
+  margin-left: 20px;
+  display: none;
+}
+
+.category:hover .sublinks {
+  display: block;
+}
+
+
+/* ================= About & Contact ================= */
+.panel {
+  padding: 60px;
+  text-align: center;
+  margin-left: 200px;   /* 或者您想要的任何值，可以是百分比、像素等 */
+  margin-right: 200px;
+}
+
+
+.panel h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* ================= 竖向循环文字 ================= */
+.vertical-text {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  font-family: 'Sen', sans-serif;
+  overflow: hidden;
+  writing-mode: vertical-lr; /* 改为 vertical-lr */
+  text-orientation: mixed;
+  font-size: 50px;
+  font-weight: 300;
+  color: black;
+  background: transparent;
+  -webkit-font-smoothing: antialiased;
+  z-index: 1000;
+}
+
+.vertical-text.left  { 
+  left: 0; 
+  margin-left: 40px;
+  transform: ; /* 左侧旋转180度 */
+}
+
+.vertical-text.right { 
+  right: 0; 
+}
+
+.vertical-text .scroller {
+  width: 100%;
+  height: 200%;
+  display: flex;
+  flex-direction: column;
+  animation: scrollDown 10s linear infinite; /* 统一动画 */
+}
+
+.vertical-text .text-item {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-lr; /* 改为 vertical-lr */
+  text-orientation: upright;
+  white-space: nowrap;
+  letter-spacing: 6px;
+}
+
+@keyframes scrollDown {
+  0%   { transform: translateY(0%); }
+  100% { transform: translateY(50%); }
+}
+
+
+
+/* ================= 固定 Logo ================= */
+.logo-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-align: right;
+}
+
+.logo-text {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.logo-sub {
+  display: block;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* ================= 分类区链接样式 ================= */
+.sublinks a {
+  color: black;              /* 默认黑色 */
+  text-decoration: none;     /* 去掉下划线 */
+  font-weight: 500;
+}
+
+.sublinks a:visited {
+  color: black;              /* 点击后仍然是黑色 */
+}
+
+.sublinks a:hover {
+  color: #555;               /* 悬停时深灰 */
+  text-decoration: underline;
+}
+

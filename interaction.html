@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>交互作品</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 可以写一些只在 works 页面生效的样式 */
+    .works-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 100px 50px; /* 留出导航栏的空间 */
+    }
+
+    .work-card {
+      background: rgba(255,255,255,0.85);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    .work-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    }
+
+    .work-card h2 {
+      margin-top: 0;
+      font-size: 20px;
+      font-weight: bold;
+      color: #222;
+    }
+
+    .work-card p {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .work-preview {
+      margin-top: 15px;
+      background: #eee;
+      border-radius: 12px;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: #666;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <!-- 导航栏 -->
+  <div class="topbar">
+    <ul class="nav-links">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="works.html">交互作品</a></li>
+      <li><a href="about.html">关于我们</a></li>
+      <li><a href="contact.html">联系我们</a></li>
+    </ul>
+  </div>
+
+  <!-- 内容区：作品展示 -->
+  <div class="works-container">
+    <div class="work-card">
+      <h2>作品一：粒子动画</h2>
+      <p>一个基于 Canvas 的交互式粒子特效，点击鼠标会生成动态火花。</p>
+      <div class="work-preview">[ 作品预览区 ]</div>
+    </div>
+
+    <div class="work-card">
+      <h2>作品二：3D 旋转立方体</h2>
+      <p>使用 CSS3 和 JavaScript 实现的三维立方体，可以拖拽旋转。</p>
+      <div class="work-preview">[ 作品预览区 ]</div>
+    </div>
+
+    <div class="work-card">
+      <h2>作品三：声音可视化</h2>
+      <p>通过 Web Audio API 实现的音乐频谱动态效果，随声音节奏跳动。</p>
+      <div class="work-preview">[ 作品预览区 ]</div>
+    </div>
+  </div>
+</body>
+</html>
